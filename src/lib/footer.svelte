@@ -4,7 +4,7 @@
 		<span class="text-xl ml-3">Mikecraft1224 | </span>
 	</a>
 
-	<a class="ml-3" href="./impressum.html">
+	<a class="ml-3" href="/impressum">
 		<span class="text-xl ml-3"><u>Impressum</u></span>
 	</a>
 
