@@ -1,37 +1,20 @@
 <script lang="ts">
-  import { slide } from 'svelte/transition';
+  import { slide, fade } from 'svelte/transition';
   import { sineInOut } from 'svelte/easing';
-  export let name:string, id:string;
+  export let name:string;
 
-	// Close the dropdown if the user moves the cursor outside of it
-  function remove(id:string): void {
-    var Dropbutton = document.getElementById('Dropbutton'+id);
-
-    if (visible) {  
-      visible = false;
-
-      setTimeout(() => {Dropbutton.classList.remove('bg-hoverhb', 'text-hoverhf');}, 300);
-    } else {
-      Dropbutton.classList.remove('bg-hoverhb', 'text-hoverhf');
-    }
-  }
-
-  // Lets the button stay highlighted while in the menu
-  function hover(id:string): void {
-    var Dropbutton = document.getElementById('Dropbutton'+id);
-    Dropbutton.classList.add('bg-hoverhb', 'text-hoverhf');
-  }
-
-  let visible = false;
+  let visible = false;  // dropcontent visibility
+  let hover = false;    // button hover active
+  let hovering = false; // menu hovering
 </script>
 
-<div class="float-left overflow-hidden text-mainhf" on:mouseleave={() => {remove(id)}} on:mouseenter={() => {hover(id)}}>
-  <button class="dropbtn cursor-pointer border-none outline-none px-4 py-1 rounded-md flex items-center m-0 transition duration-300 ease-out" on:click={() => {visible = !visible}} id="Dropbutton{id}">
+<div class="float-left overflow-hidden text-mainhf" on:mouseleave={() => {if (!visible) {hover = false}; visible = false; hovering = false}} on:mouseenter={() => {hover = true; hovering = true}}>
+  <button class="{hover == true ? "bg-hoverhb text-hoverhf" : ""} dropbtn cursor-pointer border-none outline-none px-4 py-1 rounded-md flex items-center m-0 transition duration-300 ease-in-out" on:click={() => {visible = !visible}}>
     <div class="hidden md:flex md:items-center md:justify-center"><slot name="img"/></div>
     <div class="hidden md:flex md:pl-1">&#8192;|&#8192;</div> <div>{name}</div>
   </button>
   {#if visible}
-  <div class="absolute bg-drophb min-w-[200px] shadow-md z-[1] rounded-md" transition:slide={{ duration: 300, easing: sineInOut }} id="Dropdown{id}">
+  <div class="absolute bg-drophb min-w-[200px] shadow-md z-[1] rounded-md" transition:slide={{ duration: 300, easing: sineInOut }} on:outroend={() => {if (!hovering) {hover = false}}}>
     <slot name="dropcontent"/>
   </div>
   {/if}

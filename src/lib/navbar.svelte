@@ -14,7 +14,7 @@
 </svelte:head>
 
 <nav
-	class="group w-full min-h-16 font-sans flex justify-around hover:bg-mainhb transition duration-300 ease-in-out"
+	class="group w-full min-h-16 font-sans flex justify-around hover:bg-mainhb transition duration-300 ease-in-out" 
 >
   <div class="hidden md:block"/>
 	<div class="text-sm gap-3 md:text-lg md:gap-6 flex place-content-end p-3 py-4">
@@ -22,7 +22,7 @@
 			<i class="fa-solid fa-house absolute" slot="img" />
 		</NavbarEntry>
 
-    <Dropdown name="PROJEKTE" id="1">
+    <Dropdown name="PROJEKTE">
       <i class="fa-solid fa-folder absolute" slot="img"/>
       <div slot="dropcontent">
         <NavbarEntry path="/ " name="Messenger (coming soon)">
