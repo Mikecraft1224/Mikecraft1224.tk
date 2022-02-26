@@ -15,9 +15,7 @@ const config = {
 		extend: {}
 	},
 
-	plugins: [
-    require("tailwindcss-scoped-groups"),
-  ]
+	plugins: []
 };
 
 module.exports = config;
