@@ -4,6 +4,10 @@
 	import Navbar from '$lib/navbar.svelte';
 </script>
 
+<svelte:head>
+  <link rel='icon' type='image/vnd.microsoft.icon' href='/Icon.ico'>
+</svelte:head>
+
 <Navbar />
 
 <slot />
