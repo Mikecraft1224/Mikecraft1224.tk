@@ -1,3 +1,5 @@
-<div class="my-28">
-	<p class="text-5xl font-mono flex items-center justify-center">Mikecraft1224</p>
-</div>
+<script>
+  import Header from "$lib/header.svelte";
+</script>
+
+<Header name="Mikecraft1224"/>

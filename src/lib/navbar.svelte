@@ -16,8 +16,8 @@
 <nav
 	class="group w-full min-h-16 font-sans flex justify-around hover:bg-mainhb transition duration-300 ease-in-out"
 >
-	<div />
-	<div class="text-lg gap-6 flex place-content-end p-3 py-4">
+  <div class="hidden md:block"/>
+	<div class="text-sm gap-3 md:text-lg md:gap-6 flex place-content-end p-3 py-4">
 		<NavbarEntry path="/" name="HOME">
 			<i class="fa-solid fa-house absolute" slot="img" />
 		</NavbarEntry>

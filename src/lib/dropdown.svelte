@@ -27,8 +27,8 @@
 
 <div class="float-left overflow-hidden text-mainhf" on:mouseleave={() => {remove(id)}} on:mouseenter={() => {hover(id)}}>
   <button class="dropbtn cursor-pointer border-none outline-none px-4 py-1 rounded-md flex items-center m-0 transition duration-300 ease-out" on:click={() => {visible = !visible}} id="Dropbutton{id}">
-    <slot name="img"/>
-    <div class="pl-4">&#8192;| {name}</div>
+    <div class="hidden md:flex md:items-center md:justify-center"><slot name="img"/></div>
+    <div class="hidden md:flex md:pl-1">&#8192;|&#8192;</div> <div>{name}</div>
   </button>
   {#if visible}
   <div class="absolute bg-drophb min-w-[200px] shadow-md z-[1] rounded-md" transition:slide={{ duration: 300, easing: sineInOut }} id="Dropdown{id}">
