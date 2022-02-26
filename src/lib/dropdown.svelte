@@ -26,7 +26,7 @@
 </script>
 
 <div class="float-left overflow-hidden text-mainhf" on:mouseleave={() => {remove(id)}} on:mouseenter={() => {hover(id)}}>
-  <button class="dropbtn text-mainhf cursor-pointer border-none outline-none px-4 py-1 rounded-md flex items-center m-0 focus::bg-hoverhb transition duration-300 ease-out" on:click={() => {visible = !visible}} id="Dropbutton{id}">
+  <button class="dropbtn cursor-pointer border-none outline-none px-4 py-1 rounded-md flex items-center m-0 transition duration-300 ease-out" on:click={() => {visible = !visible}} id="Dropbutton{id}">
     <slot name="img"/>
     <div class="pl-4">&#8192;| {name}</div>
   </button>
