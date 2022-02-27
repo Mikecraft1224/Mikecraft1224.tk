@@ -6,7 +6,7 @@ const config = {
       font: "#ffffff",
       background: "#111",
       // header
-      mainhb: "#cccccc",
+      mainhb: "#999999",
       mainhf: "#ffffff",
       mainhoverhf: "#111",
       hoverhb: "#3b3b3b",
