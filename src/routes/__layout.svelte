@@ -16,15 +16,15 @@
 
 <style>
 	:global(body) {
-		--main-background: #aaaaaa;
+		--main-background: #111;
 
-		background-image: url('/Background_trans.svg');
+		background-image: url('/code_wallpaper.svg');
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: center;
-		background-size: cover;
+		background-size: auto;
 
 		background-color: var(--main-background);
-    color: #293133;
+    color: #ffffff;
 	}
 </style>

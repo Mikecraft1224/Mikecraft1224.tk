@@ -3,13 +3,14 @@ const config = {
 
 	theme: {
     colors:{
-      font: "#293133",
-      background: "#aaaaaa",
+      font: "#ffffff",
+      background: "#111",
       // header
-      mainhb: "#666f75",
-      mainhf: "#0d0b0a",
-      hoverhb: "#708787",
-      hoverhf: "#d6cecc",
+      mainhb: "#cccccc",
+      mainhf: "#ffffff",
+      mainhoverhf: "#111",
+      hoverhb: "#3b3b3b",
+      hoverhf: "#ffffff",
       drophb: "#5b5b5b"
     },
 		extend: {}
