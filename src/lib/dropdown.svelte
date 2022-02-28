@@ -18,7 +18,7 @@
       {#if !visible}
         <slot name="img1"/>
       {:else}
-      <slot name="img2"/>
+        <slot name="img2"/>
       {/if}
     </div>
     <div class="hidden md:flex">&#8192;|&#8192;</div> 
