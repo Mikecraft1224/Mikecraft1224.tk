@@ -1,11 +1,14 @@
 <script lang="ts">
+  import { onMount } from 'svelte/internal';
 	import '../app.css';
   import Footer from '$lib/footer.svelte';
 	import Navbar from '$lib/navbar.svelte';
 
-  document.getElementById("copy").addEventListener("copy", function(e) {
-    e.clipboardData.setData("text/plain", "Hallo Verwi c:");
-    e.preventDefault();
+  onMount(() => {
+    document.getElementById("copy").addEventListener("copy", function(e) {
+      e.clipboardData.setData("text/plain", "Hallo Verwi c:");
+      e.preventDefault();
+    })
   })
 </script>
 
