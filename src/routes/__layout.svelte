@@ -2,17 +2,24 @@
 	import '../app.css';
   import Footer from '$lib/footer.svelte';
 	import Navbar from '$lib/navbar.svelte';
+
+  document.getElementById("copy").addEventListener("copy", function(e) {
+    e.clipboardData.setData("text/plain", "Hallo Verwi c:");
+    e.preventDefault();
+  })
 </script>
 
 <svelte:head>
   <link rel='icon' type='image/vnd.microsoft.icon' href='/Icon.ico'>
 </svelte:head>
 
-<Navbar />
+<div id="copy">
+  <Navbar />
 
-<slot />
+  <slot />
 
-<Footer />
+  <Footer />
+</div>
 
 <style>
 	:global(body) {
